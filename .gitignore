@@ -1,0 +1,54 @@
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Virtual environments ---
+rag-env/
+venv/
+env/
+ENV/
+.venv/
+
+# --- Python bytecode / cache (every folder, recursively) ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Packaging / build artifacts ---
+*.egg-info/
+build/
+dist/
+*.egg
+
+# --- Data directory: keep the folder structure via .gitkeep,
+# ignore everything actually generated at runtime inside it ---
+backend/data/*
+!backend/data/.gitkeep
+!backend/data/**/.gitkeep
+
+# Explicitly call out the generated files (covered by the rule above too,
+# but spelled out for clarity / in case data/ layout changes)
+backend/data/chroma/
+backend/data/checkpoints.db
+backend/data/threads.db
+*.db
+*.sqlite3
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+
+# --- Streamlit ---
+.streamlit/secrets.toml
+
+# --- Jupyter (in case of exploratory notebooks) ---
+.ipynb_checkpoints/
