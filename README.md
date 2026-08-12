@@ -1,12 +1,11 @@
 # 🤖 RAG Customer Support Agent
 
-A production-style customer support agent built with **LangGraph**, combining retrieval-augmented generation, confidence-based routing, and human-in-the-loop escalation — served through a **FastAPI** backend and a **Streamlit** chat interface.
+A production-style customer support agent built with **LangGraph**, combining retrieval-augmented generation, confidence-based routing, and human-in-the-loop escalation — served through a **FastAPI** backend.
 
 ![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![LangGraph](https://img.shields.io/badge/LangGraph-Agent%20Orchestration-1C3C3C?style=for-the-badge)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector%20Store-FF6F00?style=for-the-badge)
-![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-Persistence-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 
 ---
@@ -244,7 +243,7 @@ FastAPI auto-generates interactive docs — open **`http://localhost:8000/docs`*
 
 ## 🛣️ Possible Next Steps
 
-- Build a chat frontend (Streamlit or a small React UI) so the HITL confirmation flow can be tested visually instead of via `/docs`
+- Build a chat frontend so the HITL confirmation flow can be tested visually instead of via `/docs`
 - Add BM25 keyword search alongside semantic retrieval for a true hybrid pipeline (helps with exact terms like SKUs/error codes that embeddings can miss)
 - Streaming token-by-token responses via SSE
 - Admin dashboard for reviewing escalated threads
